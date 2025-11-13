@@ -125,6 +125,11 @@ export default class AddStoryPage {
         const getCurrentLocationBtn = document.getElementById('get-current-location');
         const coordText = document.getElementById('coordinates-text');
 
+        if (!getCurrentLocationBtn || !coordText) {
+            console.error('[AddStory] Location elements not found');
+            return;
+        }
+
         // Check if geolocation is supported
         if (!navigator.geolocation) {
             coordText.textContent = 'Geolocation is not supported by this browser';
@@ -204,6 +209,11 @@ export default class AddStoryPage {
         const coordText = document.getElementById('coordinates-text');
         const clearBtn = document.getElementById('clear-location');
 
+        if (!coordText || !clearBtn) {
+            console.error('[AddStory] Coordinate display elements not found');
+            return;
+        }
+
         coordText.textContent = `Selected: ${lat.toFixed(6)}, ${lon.toFixed(6)}`;
         coordText.style.color = '#333';
         clearBtn.style.display = 'inline-block';
@@ -224,6 +234,11 @@ export default class AddStoryPage {
 
         const coordText = document.getElementById('coordinates-text');
         const clearBtn = document.getElementById('clear-location');
+
+        if (!coordText || !clearBtn) {
+            console.error('[AddStory] Coordinate display elements not found');
+            return;
+        }
 
         coordText.textContent = 'No location selected';
         coordText.style.color = '#666';

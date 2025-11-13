@@ -90,9 +90,14 @@ class NotificationToggle {
     }
 
     async _handleToggle(button) {
+        if (!button) {
+            console.error('[NotificationToggle] Button is null');
+            return;
+        }
+
         const originalText = button.textContent;
         button.disabled = true;
-        button.textContent = '⏳ Loading...';
+        button.textContent = 'Loading...';
 
         try {
             await this._updateState();
