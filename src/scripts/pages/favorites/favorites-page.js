@@ -123,7 +123,6 @@ class FavoritesPage {
     if (searchQuery) {
       return `
         <div class="empty-state">
-          <div class="empty-icon"></div>
           <h2>No results found</h2>
           <p>Try different keywords</p>
         </div>
@@ -132,7 +131,6 @@ class FavoritesPage {
 
     return `
       <div class="empty-state">
-        <div class="empty-icon"></div>
         <h2>No favorites yet</h2>
         <p>Start adding stories to your favorites!</p>
         <a href="#/home" class="btn btn-primary">Browse Stories</a>

@@ -77,7 +77,7 @@ class NotificationToggle {
         if (this._permission === 'denied') {
             return '🔕 Blocked';
         }
-        return this._isSubscribed ? '🔔 On' : '🔔 Off';
+        return this._isSubscribed ? '🔔' : '🔔';
     }
 
     _getButtonTitle() {
@@ -103,15 +103,15 @@ class NotificationToggle {
                 await unsubscribeFromPushNotifications();
                 this._isSubscribed = false;
                 button.classList.remove('active');
-                button.textContent = '🔔 Off';
-                this._showToast('🔕 Notifications disabled', 'info');
+                button.textContent = '🔔';
+                this._showToast('Notifications disabled', 'info');
             } else {
                 // Subscribe
                 console.log('[NotificationToggle] Subscribing...');
                 await subscribeToPushNotifications();
                 this._isSubscribed = true;
                 button.classList.add('active');
-                button.textContent = '🔔 On';
+                button.textContent = '🔔';
                 this._showToast('🔔 Notifications enabled!', 'success');
             }
         } catch (error) {
