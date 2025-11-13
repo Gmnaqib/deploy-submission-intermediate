@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Story App - Share your stories with the world">
+  <meta name="keywords" content="stories, sharing, social, map, location">
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="shortcut icon" href="../public/favicon.png" />
+  <title>Storyu - Share Your Stories</title>
+
+  <!-- Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <style>
+    @supports (view-transition-name: none) {
+
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 0.3s;
+      }
+    }
+  </style>
+
+  <script type="module" src="/scripts/index.js"></script>
+</head>
+
+<body>
+  <header id="app-header" class="app-header" style="display: none;">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-brand">
+        <p>Storyu</p>
+      </div>
+      <ul class="nav-center">
+        <li><a href="#/home" class="nav-link">Home</a></li>
+        <li><a href="#/add-story" class="nav-link">Create Story</a></li>
+        <li><a href="#/favorites" class="nav-link">Favorites</a></li>
+      </ul>
+      <div class="nav-menu">
+        <div id="notification-container"></div>
+        <span id="user-greeting" class="user-greeting" aria-live="polite">Hello, User!</span>
+        <button id="logout-btn" class="btn btn-secondary" type="button">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="main-content">
+  </main>
+
+  <footer class="app-footer">
+    <section class="footer-content">
+      <article class="footer-section">
+        <h2>Storyu</h2>
+        <p>Share your stories with the world</p>
+      </article>
+    </section>
+
+    <section class="footer-bottom">
+      <p>&copy; 2025 Gumilar. All rights reserved.</p>
+    </section>
+  </footer>
+</body>
+
+</html>
