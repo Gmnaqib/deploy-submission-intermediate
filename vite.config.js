@@ -19,4 +19,13 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  server: {
+    host: true,
+    strictPort: false,
+  },
+  preview: {
+    host: true,
+    strictPort: false,
+    allowedHosts: ['www.gumilarmn.site', 'gumilarmn.site'],
+  },
 });
